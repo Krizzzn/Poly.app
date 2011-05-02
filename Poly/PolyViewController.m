@@ -10,8 +10,12 @@
 
 @implementation PolyViewController
 
+@synthesize polygon = _polygon;
+
 - (void)dealloc
 {
+    
+    [polySidesLabel release];
     [super dealloc];
 }
 
@@ -25,16 +29,24 @@
 
 #pragma mark - View lifecycle
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
+    Polygon *aPolygon = [[Polygon alloc] initWithSideCount:3];
+    _polygon = [aPolygon retain];
+    [aPolygon release];
+
+    
     [super viewDidLoad];
 }
-*/
+
 
 - (void)viewDidUnload
 {
+    [_polygon release];
+    [polySidesLabel release];
+    polySidesLabel = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -47,4 +59,14 @@
 }
 
 
+- (IBAction)changeSideCount:(id)sender {
+    UIButton *btn = [sender retain];
+    
+    if (btn.titleLabel.text == @"+")
+        [_polygon grow];
+    else
+        [_polygon shrink];
+        
+    [btn release];
+}
 @end
