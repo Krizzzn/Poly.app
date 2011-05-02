@@ -1,0 +1,285 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		64E15330136E9CE400A3D286 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E1532F136E9CE400A3D286 /* UIKit.framework */; };
+		64E15332136E9CE400A3D286 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E15331136E9CE400A3D286 /* Foundation.framework */; };
+		64E15334136E9CE400A3D286 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E15333136E9CE400A3D286 /* CoreGraphics.framework */; };
+		64E1533A136E9CE400A3D286 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64E15338136E9CE400A3D286 /* InfoPlist.strings */; };
+		64E1533D136E9CE400A3D286 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E1533C136E9CE400A3D286 /* main.m */; };
+		64E15340136E9CE400A3D286 /* PolyAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E1533F136E9CE400A3D286 /* PolyAppDelegate.m */; };
+		64E15343136E9CE400A3D286 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64E15341136E9CE400A3D286 /* MainWindow.xib */; };
+		64E15346136E9CE400A3D286 /* PolyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E15345136E9CE400A3D286 /* PolyViewController.m */; };
+		64E15349136E9CE400A3D286 /* PolyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64E15347136E9CE400A3D286 /* PolyViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		64E1532B136E9CE400A3D286 /* Poly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poly.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		64E1532F136E9CE400A3D286 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		64E15331136E9CE400A3D286 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		64E15333136E9CE400A3D286 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		64E15337136E9CE400A3D286 /* Poly-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Poly-Info.plist"; sourceTree = "<group>"; };
+		64E15339136E9CE400A3D286 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		64E1533B136E9CE400A3D286 /* Poly-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Poly-Prefix.pch"; sourceTree = "<group>"; };
+		64E1533C136E9CE400A3D286 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		64E1533E136E9CE400A3D286 /* PolyAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PolyAppDelegate.h; sourceTree = "<group>"; };
+		64E1533F136E9CE400A3D286 /* PolyAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PolyAppDelegate.m; sourceTree = "<group>"; };
+		64E15342136E9CE400A3D286 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		64E15344136E9CE400A3D286 /* PolyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PolyViewController.h; sourceTree = "<group>"; };
+		64E15345136E9CE400A3D286 /* PolyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PolyViewController.m; sourceTree = "<group>"; };
+		64E15348136E9CE400A3D286 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PolyViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		64E15328136E9CE400A3D286 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64E15330136E9CE400A3D286 /* UIKit.framework in Frameworks */,
+				64E15332136E9CE400A3D286 /* Foundation.framework in Frameworks */,
+				64E15334136E9CE400A3D286 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		64E15320136E9CE400A3D286 = {
+			isa = PBXGroup;
+			children = (
+				64E15335136E9CE400A3D286 /* Poly */,
+				64E1532E136E9CE400A3D286 /* Frameworks */,
+				64E1532C136E9CE400A3D286 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		64E1532C136E9CE400A3D286 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				64E1532B136E9CE400A3D286 /* Poly.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		64E1532E136E9CE400A3D286 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64E1532F136E9CE400A3D286 /* UIKit.framework */,
+				64E15331136E9CE400A3D286 /* Foundation.framework */,
+				64E15333136E9CE400A3D286 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		64E15335136E9CE400A3D286 /* Poly */ = {
+			isa = PBXGroup;
+			children = (
+				64E1533E136E9CE400A3D286 /* PolyAppDelegate.h */,
+				64E1533F136E9CE400A3D286 /* PolyAppDelegate.m */,
+				64E15341136E9CE400A3D286 /* MainWindow.xib */,
+				64E15344136E9CE400A3D286 /* PolyViewController.h */,
+				64E15345136E9CE400A3D286 /* PolyViewController.m */,
+				64E15347136E9CE400A3D286 /* PolyViewController.xib */,
+				64E15336136E9CE400A3D286 /* Supporting Files */,
+			);
+			path = Poly;
+			sourceTree = "<group>";
+		};
+		64E15336136E9CE400A3D286 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				64E15337136E9CE400A3D286 /* Poly-Info.plist */,
+				64E15338136E9CE400A3D286 /* InfoPlist.strings */,
+				64E1533B136E9CE400A3D286 /* Poly-Prefix.pch */,
+				64E1533C136E9CE400A3D286 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		64E1532A136E9CE400A3D286 /* Poly */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64E1534C136E9CE400A3D286 /* Build configuration list for PBXNativeTarget "Poly" */;
+			buildPhases = (
+				64E15327136E9CE400A3D286 /* Sources */,
+				64E15328136E9CE400A3D286 /* Frameworks */,
+				64E15329136E9CE400A3D286 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Poly;
+			productName = Poly;
+			productReference = 64E1532B136E9CE400A3D286 /* Poly.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		64E15322136E9CE400A3D286 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 64E15325136E9CE400A3D286 /* Build configuration list for PBXProject "Poly" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 64E15320136E9CE400A3D286;
+			productRefGroup = 64E1532C136E9CE400A3D286 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				64E1532A136E9CE400A3D286 /* Poly */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		64E15329136E9CE400A3D286 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64E1533A136E9CE400A3D286 /* InfoPlist.strings in Resources */,
+				64E15343136E9CE400A3D286 /* MainWindow.xib in Resources */,
+				64E15349136E9CE400A3D286 /* PolyViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		64E15327136E9CE400A3D286 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64E1533D136E9CE400A3D286 /* main.m in Sources */,
+				64E15340136E9CE400A3D286 /* PolyAppDelegate.m in Sources */,
+				64E15346136E9CE400A3D286 /* PolyViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		64E15338136E9CE400A3D286 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64E15339136E9CE400A3D286 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		64E15341136E9CE400A3D286 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64E15342136E9CE400A3D286 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		64E15347136E9CE400A3D286 /* PolyViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64E15348136E9CE400A3D286 /* en */,
+			);
+			name = PolyViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		64E1534A136E9CE400A3D286 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		64E1534B136E9CE400A3D286 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		64E1534D136E9CE400A3D286 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Poly/Poly-Prefix.pch";
+				INFOPLIST_FILE = "Poly/Poly-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = NO;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		64E1534E136E9CE400A3D286 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Poly/Poly-Prefix.pch";
+				INFOPLIST_FILE = "Poly/Poly-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		64E15325136E9CE400A3D286 /* Build configuration list for PBXProject "Poly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64E1534A136E9CE400A3D286 /* Debug */,
+				64E1534B136E9CE400A3D286 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64E1534C136E9CE400A3D286 /* Build configuration list for PBXNativeTarget "Poly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64E1534D136E9CE400A3D286 /* Debug */,
+				64E1534E136E9CE400A3D286 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 64E15322136E9CE400A3D286 /* Project object */;
+}
