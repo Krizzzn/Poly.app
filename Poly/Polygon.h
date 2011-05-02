@@ -10,14 +10,19 @@
 
 
 @interface Polygon : NSObject {
-
+    NSObject* _notificationTarget;
+    SEL _remoteaction;
 }
 
 @property (nonatomic, readonly) int sideCount;
 
 +(id)alloc;
--(id) initWithSideCount: (int) sides;
+
+-(id) initWithSideCountOf: (int) sides;
+-(id) initWithSideCountOf: (int) sides notifies: (NSObject *) target withAction: (SEL) action;
+
 -(void) grow;
 -(void) shrink;
 -(void)changeSideCountBy: (int) number;
+-(void) dealloc;
 @end

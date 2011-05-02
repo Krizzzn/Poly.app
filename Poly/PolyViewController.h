@@ -18,6 +18,7 @@
 
 - (IBAction)changeSideCount:(id)sender;
 
+- (void)updateSideCountLabel;
 
 
 @end

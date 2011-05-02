@@ -33,10 +33,11 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
-    Polygon *aPolygon = [[Polygon alloc] initWithSideCount:3];
+    Polygon *aPolygon = [[Polygon alloc] initWithSideCountOf:3 notifies:self withAction: @selector(updateSideCountLabel)];
     _polygon = [aPolygon retain];
     [aPolygon release];
-
+    
+    [self updateSideCountLabel];
     
     [super viewDidLoad];
 }
@@ -58,11 +59,16 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (void) updateSideCountLabel
+{
+    polySidesLabel.text = [NSString stringWithFormat: @"sides: %d", _polygon.sideCount];
+}
 
 - (IBAction)changeSideCount:(id)sender {
     UIButton *btn = [sender retain];
     
-    if (btn.titleLabel.text == @"+")
+    
+    if ([btn.titleLabel.text isEqualToString: @"+"])
         [_polygon grow];
     else
         [_polygon shrink];

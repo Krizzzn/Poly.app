@@ -10,6 +10,7 @@
 
 @implementation Polygon
 
+
 @synthesize sideCount = _sideCount;
 
 +(id)alloc
@@ -17,11 +18,22 @@
     return [super alloc];
 }
 
--(id) initWithSideCount: (int) sides
+-(id) initWithSideCountOf: (int) sides
+{
+    return [self initWithSideCountOf:sides notifies:nil withAction:nil];
+}
+
+-(id) initWithSideCountOf: (int) sides notifies: (NSObject *) target withAction: (SEL) action
 {
     _sideCount = sides;
     if (self.sideCount < 3)
         _sideCount = 3;
+    
+    if (target && action){
+        _notificationTarget = [target retain];
+        _remoteaction = action;
+    }
+    
     return self;
 }
 
@@ -40,5 +52,15 @@
     if (_sideCount + number < 3)
         return;
     _sideCount += number; 
+    
+    if (_notificationTarget)
+        [_notificationTarget performSelector:_remoteaction];
+}
+
+-(void)dealloc
+{
+    [_notificationTarget release];
+    
+    [super dealloc];
 }
 @end
