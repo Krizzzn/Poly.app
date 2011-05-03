@@ -18,6 +18,7 @@
 		64E15349136E9CE400A3D286 /* PolyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64E15347136E9CE400A3D286 /* PolyViewController.xib */; };
 		64E15359136EE90E00A3D286 /* Polygon.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E15358136EE90E00A3D286 /* Polygon.m */; };
 		64E1535B136EE92800A3D286 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 64E1535A136EE92800A3D286 /* README */; };
+		64E1535E136FEDAF00A3D286 /* PolygonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E1535D136FEDAF00A3D286 /* PolygonView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		64E15357136EE90E00A3D286 /* Polygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Polygon.h; sourceTree = "<group>"; };
 		64E15358136EE90E00A3D286 /* Polygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Polygon.m; sourceTree = "<group>"; };
 		64E1535A136EE92800A3D286 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		64E1535C136FEDAF00A3D286 /* PolygonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolygonView.h; sourceTree = "<group>"; };
+		64E1535D136FEDAF00A3D286 /* PolygonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolygonView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				64E15336136E9CE400A3D286 /* Supporting Files */,
 				64E15357136EE90E00A3D286 /* Polygon.h */,
 				64E15358136EE90E00A3D286 /* Polygon.m */,
+				64E1535C136FEDAF00A3D286 /* PolygonView.h */,
+				64E1535D136FEDAF00A3D286 /* PolygonView.m */,
 			);
 			path = Poly;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 				64E15340136E9CE400A3D286 /* PolyAppDelegate.m in Sources */,
 				64E15346136E9CE400A3D286 /* PolyViewController.m in Sources */,
 				64E15359136EE90E00A3D286 /* Polygon.m in Sources */,
+				64E1535E136FEDAF00A3D286 /* PolygonView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

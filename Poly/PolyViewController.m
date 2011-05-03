@@ -14,7 +14,6 @@
 
 - (void)dealloc
 {
-    
     [polySidesLabel release];
     [super dealloc];
 }
