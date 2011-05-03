@@ -8,17 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "Polygon.h"
+#import "PolygonView.h"
 
 @interface PolyViewController : UIViewController {
     
     IBOutlet UILabel *polySidesLabel;
+    IBOutlet PolygonView *polyView;
 }
 
 @property (readonly, retain) Polygon *polygon;
 
 - (IBAction)changeSideCount:(id)sender;
 
-- (void)updateSideCountLabel;
+- (void)updateSideCountLabel: (id) poly;
 
 
 @end

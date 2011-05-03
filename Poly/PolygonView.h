@@ -10,7 +10,9 @@
 
 
 @interface PolygonView : UIView {
-    
+    int _sides;
 }
+
+-(void) redrawPolygon: (id) poly;
 
 @end

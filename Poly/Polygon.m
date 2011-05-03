@@ -20,21 +20,17 @@
 
 -(id) initWithSideCountOf: (int) sides
 {
-    return [self initWithSideCountOf:sides notifies:nil withAction:nil];
-}
-
--(id) initWithSideCountOf: (int) sides notifies: (NSObject *) target withAction: (SEL) action
-{
+    _notifications = [[NSMutableDictionary alloc] init];
+    
     _sideCount = sides;
     if (self.sideCount < 3)
         _sideCount = 3;
-    
-    if (target && action){
-        _notificationTarget = [target retain];
-        _remoteaction = action;
-    }
-    
     return self;
+}
+
+-(void) notifyListener:(id)object andCallAction: (NSString *) action
+{
+    [_notifications setObject:object forKey: action];
 }
 
 -(void) grow
@@ -53,13 +49,18 @@
         return;
     _sideCount += number; 
     
-    if (_notificationTarget)
-        [_notificationTarget performSelector:_remoteaction];
+   if (_notifications && [_notifications count] > 0)
+   {
+       for (id object in [_notifications allKeys]) {
+           [[_notifications objectForKey:object] performSelector: NSSelectorFromString(object) withObject: (id)self];
+       }
+   }
+
 }
 
 -(void)dealloc
 {
-    [_notificationTarget release];
+    [_notifications release];
     
     [super dealloc];
 }

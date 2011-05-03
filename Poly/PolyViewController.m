@@ -15,6 +15,7 @@
 - (void)dealloc
 {
     [polySidesLabel release];
+    [polyView release];
     [super dealloc];
 }
 
@@ -32,11 +33,18 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
-    Polygon *aPolygon = [[Polygon alloc] initWithSideCountOf:3 notifies:self withAction: @selector(updateSideCountLabel)];
+    Polygon *aPolygon = [[Polygon alloc] initWithSideCountOf:3];
+    // notifies:self withAction: @selector(updateSideCountLabel)
+    
+    
+    [aPolygon notifyListener:self andCallAction: @"updateSideCountLabel:"];
+    [aPolygon notifyListener:polyView andCallAction: @"redrawPolygon:"];
+    
     _polygon = [aPolygon retain];
     [aPolygon release];
     
-    [self updateSideCountLabel];
+    [self updateSideCountLabel: aPolygon];
+    [polyView redrawPolygon:aPolygon];
     
     [super viewDidLoad];
 }
@@ -47,6 +55,8 @@
     [_polygon release];
     [polySidesLabel release];
     polySidesLabel = nil;
+    [polyView release];
+    polyView = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -58,9 +68,16 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (void) updateSideCountLabel
+- (void) updateSideCountLabel: (id) poly
 {
-    polySidesLabel.text = [NSString stringWithFormat: @"sides: %d", _polygon.sideCount];
+    if (![poly isKindOfClass: [Polygon class]])
+        return;
+    
+    Polygon *p = [(Polygon*)poly retain];
+    
+    polySidesLabel.text = [NSString stringWithFormat: @"sides: %d", p.sideCount];
+    
+    [p release];
 }
 
 - (IBAction)changeSideCount:(id)sender {
