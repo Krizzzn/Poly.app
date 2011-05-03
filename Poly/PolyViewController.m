@@ -16,6 +16,7 @@
 {
     [polySidesLabel release];
     [polyView release];
+    [advancedView release];
     [super dealloc];
 }
 
@@ -34,9 +35,8 @@
 - (void)viewDidLoad
 {
     Polygon *aPolygon = [[Polygon alloc] initWithSideCountOf:3];
-    // notifies:self withAction: @selector(updateSideCountLabel)
-    
-    
+
+    //Binding the callback events
     [aPolygon notifyListener:self andCallAction: @"updateSideCountLabel:"];
     [aPolygon notifyListener:polyView andCallAction: @"redrawPolygon:"];
     
@@ -57,6 +57,8 @@
     polySidesLabel = nil;
     [polyView release];
     polyView = nil;
+    [advancedView release];
+    advancedView = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -91,4 +93,36 @@
         
     [btn release];
 }
+
+#pragma mark AdvancedOptions
+- (IBAction)showAdvanced:(id)sender {
+    
+    int move = advancedView.frame.size.height;
+    if (![sender isOn])
+        move = move * -1;
+    
+    [UIView beginAnimations:@"showAdvanced" context:nil];
+    [UIView setAnimationDuration:0.4];
+    
+    CGRect polyFrame = polyView.frame;
+    polyFrame.origin.y += move;
+    polyView.frame = polyFrame;
+    
+    advancedView.alpha = ([sender isOn]) ? 1.0 : .0;
+    
+    [UIView commitAnimations];
+    
+}
+
+- (IBAction)toggleFill:(id)sender {
+    UISegmentedControl *sc = (UISegmentedControl*)sender;
+    
+    polyView.fillPolygon = (sc.selectedSegmentIndex == 1);
+}
+
+- (IBAction)changeBorderSize:(UISlider*)sender {
+    polyView.borderSize = sender.value;
+    
+}
+
 @end

@@ -14,6 +14,7 @@
     
     IBOutlet UILabel *polySidesLabel;
     IBOutlet PolygonView *polyView;
+    IBOutlet UIView *advancedView;
 }
 
 @property (readonly, retain) Polygon *polygon;
@@ -22,5 +23,8 @@
 
 - (void)updateSideCountLabel: (id) poly;
 
+- (IBAction)showAdvanced:(id)sender;
+- (IBAction)toggleFill:(id)sender;
+- (IBAction)changeBorderSize:(UISlider*)sender;
 
 @end

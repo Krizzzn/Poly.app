@@ -13,6 +13,10 @@
     int _sides;
 }
 
+@property (nonatomic) BOOL fillPolygon;
+@property (nonatomic) float borderSize;
+
+-(id) init;
 -(void) redrawPolygon: (id) poly;
 
 @end
