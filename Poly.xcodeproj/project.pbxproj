@@ -19,6 +19,7 @@
 		64E15359136EE90E00A3D286 /* Polygon.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E15358136EE90E00A3D286 /* Polygon.m */; };
 		64E1535B136EE92800A3D286 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 64E1535A136EE92800A3D286 /* README */; };
 		64E1535E136FEDAF00A3D286 /* PolygonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E1535D136FEDAF00A3D286 /* PolygonView.m */; };
+		64EC4F1A1371B4C40041D7E4 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64EC4F191371B4C40041D7E4 /* Entitlements.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		64E1535A136EE92800A3D286 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		64E1535C136FEDAF00A3D286 /* PolygonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolygonView.h; sourceTree = "<group>"; };
 		64E1535D136FEDAF00A3D286 /* PolygonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolygonView.m; sourceTree = "<group>"; };
+		64EC4F191371B4C40041D7E4 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				64E15358136EE90E00A3D286 /* Polygon.m */,
 				64E1535C136FEDAF00A3D286 /* PolygonView.h */,
 				64E1535D136FEDAF00A3D286 /* PolygonView.m */,
+				64EC4F191371B4C40041D7E4 /* Entitlements.plist */,
 			);
 			path = Poly;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				64E15343136E9CE400A3D286 /* MainWindow.xib in Resources */,
 				64E15349136E9CE400A3D286 /* PolyViewController.xib in Resources */,
 				64E1535B136EE92800A3D286 /* README in Resources */,
+				64EC4F1A1371B4C40041D7E4 /* Entitlements.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +278,37 @@
 			};
 			name = Release;
 		};
+		64EC4F1C1371B4EA0041D7E4 /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = Entitlements.plist;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+			};
+			name = "Ad Hoc";
+		};
+		64EC4F1D1371B4EA0041D7E4 /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Poly/Poly-Prefix.pch";
+				INFOPLIST_FILE = "Poly/Poly-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = "Ad Hoc";
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -282,6 +317,7 @@
 			buildConfigurations = (
 				64E1534A136E9CE400A3D286 /* Debug */,
 				64E1534B136E9CE400A3D286 /* Release */,
+				64EC4F1C1371B4EA0041D7E4 /* Ad Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -291,6 +327,7 @@
 			buildConfigurations = (
 				64E1534D136E9CE400A3D286 /* Debug */,
 				64E1534E136E9CE400A3D286 /* Release */,
+				64EC4F1D1371B4EA0041D7E4 /* Ad Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

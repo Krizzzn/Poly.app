@@ -11,6 +11,8 @@
 
 @interface PolygonView : UIView {
     int _sides;
+    float _rotation;
+    CGPoint _downEvent;
 }
 
 @property (nonatomic) BOOL fillPolygon;

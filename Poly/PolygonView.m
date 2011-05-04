@@ -67,6 +67,10 @@
 
     CGContextTranslateCTM(context, center.x, center.y);
     
+    
+    
+    CGContextRotateCTM(context, _rotation);
+    
     [[UIColor whiteColor] setStroke];
     
     CGContextBeginPath(context);
@@ -103,6 +107,61 @@
     [self setNeedsDisplay];
     
     [p release];
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *t = [[touches anyObject] retain];
+    
+    _downEvent = [t locationInView:self];
+    
+    [t release];
+    
+    [self setNeedsDisplay];
+        
+    [super touchesBegan:touches withEvent:event];
+}
+
+-(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{  
+    [super touchesCancelled:touches withEvent:event];    
+}
+
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *t = [[touches anyObject] retain];
+    
+    if ([t tapCount] > 0)
+        _rotation = 0;
+    
+    [t release];
+    
+    [super touchesEnded:touches withEvent:event];
+}
+
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+
+    UITouch *t = [[touches anyObject] retain];
+    
+    // caching this could improve performance?!?
+    CGRect bounds = [self bounds];
+    int middle = bounds.size.width / 2;
+    
+    CGPoint p = [t locationInView:self];
+    
+    float dist = abs(middle - p.x);
+    dist = dist / middle * 120.0; 
+    _rotation = (p.y - _downEvent.y) / (int)dist;
+    _rotation = ( _rotation) * M_PI;
+    
+    if (p.x < middle)
+        _rotation = _rotation *-1;
+    
+    [self setNeedsDisplay];
+    
+    [t release];
+    [super touchesMoved:touches withEvent:event];
 }
 
 
